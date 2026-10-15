@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '#lib/components/Header.svelte';
+	import Ticker from '#lib/components/Ticker.svelte';
 	import Hero from '#lib/components/Hero.svelte';
 	import Features from '#lib/components/Features.svelte';
 	import Pulse from '#lib/components/Pulse.svelte';
@@ -7,6 +8,7 @@
 	import Compare from '#lib/components/Compare.svelte';
 	import Examples from '#lib/components/Examples.svelte';
 	import Api from '#lib/components/Api.svelte';
+	import Benchmark from '#lib/components/Benchmark.svelte';
 	import Errors from '#lib/components/Errors.svelte';
 	import Tests from '#lib/components/Tests.svelte';
 	import DocsCta from '#lib/components/DocsCta.svelte';
@@ -21,6 +23,7 @@
 
 <Header />
 <main id="conteudo">
+	<Ticker />
 	<Hero js={data.quickstart.js} ts={data.quickstart.ts} />
 	<Features />
 	<Pulse />
@@ -28,6 +31,7 @@
 	<Compare manual={data.compare.manual} js={data.compare.js} ts={data.compare.ts} />
 	<Examples rendered={data.examples} />
 	<Api />
+	<Benchmark />
 	<Errors js={data.errors.js} ts={data.errors.ts} />
 	<Tests js={data.tests.js} ts={data.tests.ts} />
 	<DocsCta />

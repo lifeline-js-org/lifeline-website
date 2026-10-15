@@ -10,6 +10,7 @@
 		{ href: '/#simulador', label: 'Simulador', match: '' },
 		{ href: '/#exemplos', label: 'Exemplos', match: '' },
 		{ href: '/#api', label: 'API', match: '' },
+		{ href: '/#benchmark', label: 'Benchmark', match: '' },
 		{ href: '/#testes', label: 'Testes', match: '' }
 	];
 

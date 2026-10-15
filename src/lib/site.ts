@@ -1,7 +1,7 @@
 export const SITE = {
 	name: 'LifeLine.js',
 	/** Domínio canônico — usado em canonical, Open Graph e sitemap. */
-	url: 'https://lifeline.discloud.app',
+	url: 'https://lifeline.discloud.dev',
 	tagline: 'Inicie, conecte e encerre com segurança.',
 	description:
 		'LifeLine.js coordena a inicialização, as dependências e o encerramento dos recursos de aplicações Node.js, com rollback em ordem inversa e um contrato de erros explícito.',

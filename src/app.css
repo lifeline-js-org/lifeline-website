@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/nunito';
 @import '@fontsource-variable/jetbrains-mono';
 
 @theme {
@@ -15,7 +15,7 @@
 	--color-mute: #8d8d8a;
 	--color-fault: #ff5f49;
 	--color-amber: #f5b94a;
-	--font-sans: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-sans: 'Nunito Variable', ui-rounded, 'Segoe UI', system-ui, sans-serif;
 	--font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 }
 
@@ -28,6 +28,7 @@
 	}
 	body {
 		font-family: var(--font-sans);
+		font-optical-sizing: auto;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
 	}
@@ -203,4 +204,52 @@
 .scroll-thin::-webkit-scrollbar-thumb {
 	background: var(--color-trace-2);
 	border-radius: 99px;
+}
+
+/* ——— barra rolante (ticker) ——— */
+@keyframes ticker-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+.ticker-track {
+	display: flex;
+	width: max-content;
+	animation: ticker-scroll 38s linear infinite;
+}
+.ticker:hover .ticker-track {
+	animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+	.ticker-track {
+		animation: none;
+	}
+}
+
+/* ——— cursor de digitação ——— */
+@keyframes caret-blink {
+	0%,
+	45% {
+		opacity: 1;
+	}
+	50%,
+	95% {
+		opacity: 0;
+	}
+}
+.caret {
+	display: inline-block;
+	width: 0.55ch;
+	height: 1.05em;
+	translate: 0 0.18em;
+	background: var(--color-signal);
+	animation: caret-blink 1.1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+	.caret {
+		animation: none;
+	}
 }
