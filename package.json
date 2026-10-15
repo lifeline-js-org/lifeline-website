@@ -9,7 +9,8 @@
   "scripts": {
     "start": "HOST=0.0.0.0 PORT=8080 node dist/index.js",
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "node scripts/generate-docs.mjs && vite build",
+    "docs:sync": "node scripts/generate-docs.mjs",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
