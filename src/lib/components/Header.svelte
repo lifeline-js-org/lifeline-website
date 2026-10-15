@@ -32,7 +32,7 @@
 			<span>Life</span><span class="text-signal">Line.js</span>
 		</a>
 
-		<nav class="ml-2 hidden items-center gap-0.5 md:flex" aria-label="Principal">
+		<nav class="ml-2 hidden items-center gap-0.5 lg:flex" aria-label="Principal">
 			{#each nav as item (item.label)}
 				<a
 					href={item.href}
@@ -70,7 +70,7 @@
 				aria-expanded={menuOpen}
 				aria-controls="nav-movel"
 				aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
-				class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-md text-mute transition-colors hover:text-bone md:hidden"
+				class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-md text-mute transition-colors hover:text-bone lg:hidden"
 			>
 				{#if menuOpen}
 					<X size={19} />
@@ -83,7 +83,7 @@
 
 	<!-- navegação móvel -->
 	{#if menuOpen}
-		<div id="nav-movel" class="border-t border-trace bg-ink px-5 py-3 md:hidden">
+		<div id="nav-movel" class="border-t border-trace bg-ink px-5 py-3 lg:hidden">
 			<nav class="flex flex-col gap-1" aria-label="Principal (móvel)">
 				{#each nav as item (item.label)}
 					<a

@@ -100,7 +100,7 @@
 			{/each}
 		</div>
 
-		<div class="flex items-center gap-2">
+		<div class="flex flex-wrap items-center gap-2">
 			<button
 				type="button"
 				onclick={() => sim.start()}

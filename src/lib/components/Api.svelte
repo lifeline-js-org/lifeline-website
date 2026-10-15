@@ -81,7 +81,7 @@
 <section id="api" class="border-b border-trace bg-ink-2/40">
 	<div class="mx-auto max-w-6xl px-5 py-20 md:py-24">
 		<div class="grid gap-14 lg:grid-cols-[0.85fr_1.35fr]">
-			<div class="lg:sticky lg:top-24 lg:self-start">
+			<div class="min-w-0 lg:sticky lg:top-24 lg:self-start">
 				<h2 class="text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">Uma classe, cinco métodos.</h2>
 				<p class="mt-4 max-w-md text-lg leading-relaxed text-mute">
 					A API pública inteira do <code class="font-mono text-[0.85em] text-bone">lifeline.js</code> — e também do subpath
@@ -98,7 +98,7 @@
 				</dl>
 			</div>
 
-			<div>
+			<div class="min-w-0">
 				<dl class="divide-y divide-trace border-y border-trace">
 					{#each methods as m (m.sig)}
 						<div class="grid gap-2 py-6 sm:grid-cols-[17rem_1fr] sm:gap-8">
